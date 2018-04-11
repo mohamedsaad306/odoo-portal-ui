@@ -1,0 +1,25 @@
+<div class="card  mb-3" style="max-width: 20rem;">
+  <div class="card-header" data-toggle="collapse" data-target="#collapseExample"> Header</div>
+  <div id="collapseExample" class="collapse show">
+
+    <div id=" " class="card-body "  >
+      <!-- <h4 class="card-title">Primary card title</h4> -->
+      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+
+      <!-- <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" id="customCheck1" checked="">
+        <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+      </div> -->
+
+      <ng-template ngFor let-item [ngForOf]="items" let-i="index" [ngForTrackBy]="trackByFn">
+     
+        <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="category-{{items[i].id}}" >
+          <label class="custom-control-label" for="category-{{items[i].id}}"> {{items[i].text}} </label>
+        </div>
+
+      </ng-template>
+
+    </div>
+  </div>
+</div>
