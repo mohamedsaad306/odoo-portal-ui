@@ -1,5 +1,5 @@
 <div class="card  mb-3" style="max-width: 20rem;">
-  <div class="card-header" data-toggle="collapse" data-target="#collapseExample"> Header</div>
+  <div class="card-header" data-toggle="collapse" data-target="#collapseExample"> {{CheckListContentType}}</div>
   <div id="collapseExample" class="collapse show">
 
     <div id=" " class="card-body "  >
@@ -11,8 +11,7 @@
         <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
       </div> -->
 
-      <ng-template ngFor let-item [ngForOf]="items" let-i="index" [ngForTrackBy]="trackByFn">
-     
+      <ng-template ngFor let-item [ngForOf]="items" let-i="index" [ngForTrackBy]="trackByFn">     
         <div class="custom-control custom-checkbox">
           <input type="checkbox" class="custom-control-input" id="category-{{items[i].id}}" >
           <label class="custom-control-label" for="category-{{items[i].id}}"> {{items[i].text}} </label>
