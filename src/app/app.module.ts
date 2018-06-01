@@ -7,6 +7,7 @@ import { CheckListComponent } from './check-list/check-list.component';
 import { HttpClient, HttpClientModule, HttpInterceptor, HttpEvent, HttpHandler, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import { ProductsGalleryComponent } from './products-gallery/products-gallery.component';
 
 
 
@@ -26,7 +27,8 @@ import { Observable } from 'rxjs/Observable';
 @NgModule({
   declarations: [
     AppComponent,
-    CheckListComponent
+    CheckListComponent,
+    ProductsGalleryComponent
   ],
   imports: [
     BrowserModule,
@@ -34,10 +36,11 @@ import { Observable } from 'rxjs/Observable';
   ],
   providers: [
     HttpClient,
-//    { provide: HTTP_INTERCEPTORS, useClass: ExampleInterceptor, multi: true }
+    //    { provide: HTTP_INTERCEPTORS, useClass: ExampleInterceptor, multi: true }
   ],
   bootstrap: [AppComponent],
-  
+
 })
+
 export class AppModule { }
 

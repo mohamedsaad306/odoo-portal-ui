@@ -1,8 +1,8 @@
 <div class="card  mb-3" style="max-width: 20rem;">
-  <div class="card-header" data-toggle="collapse" data-target="#collapseExample"> {{CheckListContentType}}</div>
+  <div class="card-header" data-toggle="collapse" [attr.data-target]="'#'+idx"> {{CheckListContentType}}</div>
   <div id="collapseExample" class="collapse show">
 
-    <div id=" " class="card-body "  >
+    <div id="{{idx}}" class="card-body "  >
       <!-- <h4 class="card-title">Primary card title</h4> -->
       <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
 
@@ -13,8 +13,8 @@
 
       <ng-template ngFor let-item [ngForOf]="items" let-i="index" [ngForTrackBy]="trackByFn">     
         <div class="custom-control custom-checkbox">
-          <input type="checkbox" class="custom-control-input" id="category-{{items[i].id}}" >
-          <label class="custom-control-label" for="category-{{items[i].id}}"> {{items[i].text}} </label>
+          <input type="checkbox" class="custom-control-input" id="{{idx}}-{{items[i].id}}" >
+          <label class="custom-control-label" for="{{idx}}-{{items[i].id}}"> {{items[i].name}} </label>
         </div>
 
       </ng-template>

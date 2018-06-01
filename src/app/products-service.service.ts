@@ -13,8 +13,11 @@ export class ProductsServiceService {
   constructor(private http:HttpClient) { }
   
   getLocations() {
- 
     // return this.http.get('http://localhost:3000/getdata');
-    return this.http.get('http://localhost:3000/getdata');
+    return this.http.get('http://localhost:3000/locations')
+  }
+  getCategories() {
+    // return this.http.get('http://localhost:3000/getdata');
+    return this.http.get('http://localhost:3000/Categories')
   }
 }

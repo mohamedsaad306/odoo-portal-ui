@@ -10,6 +10,22 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'app';
-  categoriesName = 'Categories';
+  categoriesName = 'Categories ';
   locationsName = 'Locations';
-}
+  
+  categoriesItems :string; 
+  locationsItems :string; 
+
+  constructor(private productsServiceService: ProductsServiceService) {
+    this.productsServiceService.getCategories().subscribe(
+      (data: any) => {  this.categoriesItems = JSON.stringify(data);
+      }
+    );
+    this.productsServiceService.getLocations().subscribe(
+      (data: any) => {  this.locationsItems = JSON.stringify(data); }
+    );
+  }
+  ngOnInit() {
+  }
+
+  }

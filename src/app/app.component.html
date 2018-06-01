@@ -11,7 +11,8 @@
     </div>
 
     <div class="content-div">
-        <app-check-list CheckListContentType="{{categoriesName}}" > </app-check-list>
-        <app-check-list CheckListContentType="{{locationsName}}"></app-check-list>
+        <app-check-list idx ="categories-list"  CheckListContentType="{{categoriesName}}" inputItems="{{categoriesItems}}" > </app-check-list>
+         <app-check-list idx ="locations-list"  CheckListContentType="{{locationsName}}" inputItems="{{locationsItems}}" ></app-check-list>
+         <app-products-gallery></app-products-gallery>
     </div>
 </div>
